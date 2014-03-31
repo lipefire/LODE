@@ -35,10 +35,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -103,63 +99,50 @@ import com.clarkparsia.pellet.owlapiv3.PelletReasonerFactory;
 /**
  * Servlet implementation class LodeServlet
  */
-public class LodeServlet extends HttpServlet {
+public class LodeServlet {
 	private static final long serialVersionUID = 1L;
-	private String xsltURL = "http://lode.sourceforge.net/xslt";
-	private String cssLocation = "http://lode.sourceforge.net/css/";
+	private String xsltURL = "../LODE/content/xslt/extraction.xsl";
+	private String cssLocation = "../LODE/content/css/";
 	private int maxTentative = 3;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+
     public LodeServlet() {
         super();
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(
-			HttpServletRequest request, HttpServletResponse response) 
-	throws ServletException, IOException {
-		response.setContentType("text/html");
-		
-		resolvePaths(request); /* Used instead of the SourceForge repo */
-		response.setCharacterEncoding("UTF-8");
-		PrintWriter out = response.getWriter();
+	protected void doGet() throws IOException {
 		
 		SourceExtractor extractor = new SourceExtractor();
 		extractor.addMimeTypes(MimeType.mimeTypes);
-		
+        File file = new File("index.html");
+        file.createNewFile();
+
+        PrintWriter out = new PrintWriter(file, "UTF8");
+
 		for (int i = 0; i < maxTentative; i++) {
 			try {
-				String stringURL = request.getParameter("url");
-				
+				String stringURL = "http://cin.ufpe.br/~fmca/cin_onto_prop.owl";
 				URL ontologyURL = new URL(stringURL);
 				HttpURLConnection.setFollowRedirects(true);
 				
 				String content = "";
 			
-				boolean useOWLAPI = new Boolean(request.getParameter("owlapi"));
-				boolean considerImportedOntologies = 
-					new Boolean(request.getParameter("imported"));
-				boolean considerImportedClosure = 
-					new Boolean(request.getParameter("closure"));
-				boolean useReasoner = 
-					new Boolean(request.getParameter("reasoner"));
-				
-				if (considerImportedOntologies || considerImportedClosure || useReasoner) {
-					useOWLAPI = true;
-				}
-				
-				String lang = request.getParameter("lang");
+
+				boolean	useOWLAPI = true;
+
+
+				String lang = "pt";
+
 				if (lang == null) {
 					lang = "en";
 				}
 				
 				
 				if (useOWLAPI) {
-					content = parseWithOWLAPI(ontologyURL, useOWLAPI, considerImportedOntologies, 
+                    boolean considerImportedOntologies = false;
+                    boolean useReasoner = false;
+                    boolean considerImportedClosure = false;
+
+                    content = parseWithOWLAPI(ontologyURL, useOWLAPI, considerImportedOntologies,
 							considerImportedClosure, useReasoner);
 				} else {
 					content = extractor.exec(ontologyURL);
@@ -174,7 +157,8 @@ public class LodeServlet extends HttpServlet {
 				*/
 				
 				content = applyXSLTTransformation(content, stringURL, lang);
-				
+
+
 				out.println(content);
 				i = maxTentative;
 			} catch (Exception e) {
@@ -183,14 +167,13 @@ public class LodeServlet extends HttpServlet {
 				}
 			}
 		}
+
+        out.flush();
+        out.close();
+        System.out.println(maxTentative);
 	}
 	
-	private void resolvePaths(HttpServletRequest request) {
-		xsltURL = getServletContext().getRealPath("extraction.xsl");
-		String requestURL = request.getRequestURL().toString();
-		int index = requestURL.lastIndexOf("/");
-		cssLocation = requestURL.substring(0, index) + File.separator;
-	}
+
 
 	/* Old version of the method (before upgrading OWLAPI)
 	private String parseWithOWLAPI(

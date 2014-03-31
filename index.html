@@ -1,0 +1,1291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="assets/css/owl.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/Primer.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/rec.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/extra.css" rel="stylesheet" type="text/css"/>
+    <link rel="shortcut icon" href="assets/css/favicon.ico"/>
+    <script src="assets/css/jquery.js"></script>
+    <script src="assets/css/jquery.scrollTo.js"></script>
+    <script>
+                $(document).ready(
+                    function () {
+                        var list = $('a[name="http://cin.ufpe.br/~fmca/cin_onto_prop.owl"]');
+                        if (list.size() != 0) {
+                        	var element = list.first();
+                        	$.scrollTo(element);
+                        }
+                    });
+        
+    </script>
+</head>
+<body>
+<div class="head">
+    <dl>
+        <dt>IRI:</dt>
+        <dd>http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn</dd>
+    </dl>
+    <dl>
+        <dt>Outra visualização:</dt>
+        <dd><a href="assets/css/source?url=http://cin.ufpe.br/~fmca/cin_onto_prop.owl">Fontes da Ontologia</a>
+        </dd>
+    </dl>
+</div>
+<hr/>
+<h2>Resumo</h2>
+
+<p>Esta ontologia foi desenvolvida para descrever o ambiente acadêmico pelo qual o CIn-UFPE está imerso, essencialmente
+    focada nos docentes e entidades relacionadas. Dela são extraídas as áreas de interesse de cada professor, bem como
+    as disciplinas por ele lecionadas, suas publicações, participações em eventos e os projetos que ele faz parte.</p>
+
+<div id="toc"><h2>Tabela de conteúdos</h2>
+    <ol>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#objectproperties">Propriedades de Objeto</a></li>
+        <li><a href="#dataproperties">Propriedades de dados</a></li>
+        <li><a href="#namespacedeclarations">Declarações de Namespace</a></li>
+    </ol>
+</div>
+<div id="classes"><h2>Classes</h2>
+    <ul class="hlist">
+        <li><a href="#d4e399" title="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping">Agrupamento Acadêmico</a>
+        </li>
+        <li><a href="#d4e474" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#Allocation">Alocação</a>
+        </li>
+        <li><a href="#d4e539" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#Occupation">Cargo</a>
+        </li>
+        <li><a href="#d4e383" title="http://purl.org/vocab/aiiso/schema#Center">Centro</a></li>
+        <li><a href="#d4e355" title="http://purl.org/ontology/bibo/Conference">Conferência</a></li>
+        <li><a href="#d4e586"
+               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CInwww.aktors.org/ontology/portal#Course">Curso</a>
+        </li>
+        <li><a href="#d4e490"
+               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#Discipline">Disciplina</a></li>
+        <li><a href="#d4e416" title="http://www.aktors.org/ontology/portal#Academic">Docente</a></li>
+        <li><a href="#d4e572" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#TemporaryEvent">Evento
+            Temporário</a></li>
+        <li><a href="#d4e432" title="http://www.aktors.org/ontology/portal#Academic-Degree">Grau Acadêmico</a></li>
+        <li><a href="#d4e556" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#ResearchGroup">Grupo de
+            Pesquisa</a></li>
+        <li><a href="#d4e446" title="http://www.aktors.org/ontology/portal#Organization">Organização</a></li>
+        <li><a href="#d4e633" title="http://xmlns.com/foaf/0.1/Person">Pessoa</a></li>
+        <li><a href="#d4e458" title="http://www.aktors.org/ontology/portal#Project">Projeto</a></li>
+        <li><a href="#d4e372" title="http://purl.org/ontology/bibo/Document">Publicação</a></li>
+        <li><a href="#d4e617"
+               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CInwww.aktors.org/ontology/portal#University">Universidade</a>
+        </li>
+        <li><a href="#d4e507" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#ExpertiseArea">Área de
+            Atuação</a></li>
+        <li><a href="#d4e603"
+               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CInwww.aktors.org/ontology/portal#KnowledgeArea">Área
+            de Conhecimento</a></li>
+        <li><a href="#d4e523" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#InterestArea">Área de
+            Interesse</a></li>
+    </ul>
+    <div id="d4e399" class="entity"><a name="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping"></a>
+
+        <h3>Agrupamento Acadêmico<sup title="classe" class="type-c">c</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#classes">Classe TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://purl.org/vocab/aiiso/schema#KnowledgeGrouping</p>
+
+        <div class="comment"><p> Representa uma coleção de recursos acadêmicos com finalidade educacional ou de pesquisa
+            num escopo bem definido dentro de uma Organização.</p></div>
+        <dl class="description">
+            <dt>possui sub-classes</dt>
+            <dd><a href="#d4e490" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#Discipline">Disciplina</a><sup
+                    title="classe" class="type-c">c</sup>, <a href="#d4e458"
+                                                              title="http://www.aktors.org/ontology/portal#Project">Projeto</a><sup
+                    title="classe" class="type-c">c</sup></dd>
+            <dt>está no domínio de</dt>
+            <dd><a href="#d4e32"
+                   title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#aPartOf">:aPartOf</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup>, <a href="#d4e263"
+                                                                               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#homepage">:homepage</a><sup
+                    title="propriedade de dados" class="type-dp">dp</sup></dd>
+            <dt>é disjunto com</dt>
+            <dd><a href="#d4e446" title="http://www.aktors.org/ontology/portal#Organization">Organização</a><sup
+                    title="classe" class="type-c">c</sup></dd>
+        </dl>
+    </div>
+    <div id="d4e474" class="entity"><a name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#Allocation"></a>
+
+        <h3>Alocação<sup title="classe" class="type-c">c</sup><span class="backlink"> voltar para <a href="#toc">TdC</a> ou <a
+                href="#classes">Classe TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#Allocation</p>
+
+        <div class="comment"><p>Alocação é uma designação de um ou mais docentes para uma disciplina a ministrar durante
+            um intervalo de tempo.</p></div>
+        <dl class="description">
+            <dt>possui super-classes</dt>
+            <dd><a href="#d4e572" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#TemporaryEvent">Evento
+                Temporário</a><sup title="classe" class="type-c">c</sup></dd>
+            <dt>está no domínio de</dt>
+            <dd><a href="#d4e139" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#isOccurrenceOf">:isOccurrenceOf</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup>, <a href="#d4e181"
+                                                                               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#taughtBy">:taughtBy</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup></dd>
+        </dl>
+    </div>
+    <div id="d4e539" class="entity"><a name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#Occupation"></a>
+
+        <h3>Cargo<sup title="classe" class="type-c">c</sup><span class="backlink"> voltar para <a href="#toc">TdC</a> ou <a
+                href="#classes">Classe TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#Occupation</p>
+
+        <div class="comment"><p>Cargo é uma função pública exercida por uma Pessoa dentro de uma organização durante um
+            intervalo de tempo.</p></div>
+        <dl class="description">
+            <dt>possui super-classes</dt>
+            <dd><a href="#d4e572" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#TemporaryEvent">Evento
+                Temporário</a><sup title="classe" class="type-c">c</sup></dd>
+            <dt>está no domínio de</dt>
+            <dd><a href="#d4e160" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#occupiedBy">:occupiedBy</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup></dd>
+            <dt>está no intervalo de</dt>
+            <dd><a href="#d4e105" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#hasOccupation">:hasOccupation</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup>, <a href="#d4e151"
+                                                                               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#managed">:managed</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup></dd>
+        </dl>
+    </div>
+    <div id="d4e383" class="entity"><a name="http://purl.org/vocab/aiiso/schema#Center"></a>
+
+        <h3>Centro<sup title="classe" class="type-c">c</sup><span class="backlink"> voltar para <a href="#toc">TdC</a> ou <a
+                href="#classes">Classe TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://purl.org/vocab/aiiso/schema#Center</p>
+
+        <div class="comment"><p>Os Centros são órgãos reconhecidos pela Universidade com a finalidade de desenvolver o
+            ensino, a pesquisa e a extensão. Os Centros podem corresponder tanto às áreas fundamentais do conhecimentos
+            humanos quanto a áreas específicas de aplicação científica, cultural e profissional.</p></div>
+        <dl class="description">
+            <dt>possui super-classes</dt>
+            <dd><a href="#d4e446" title="http://www.aktors.org/ontology/portal#Organization">Organização</a><sup
+                    title="classe" class="type-c">c</sup></dd>
+            <dt>está no domínio de</dt>
+            <dd><a href="#d4e151" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#managed">:managed</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup></dd>
+        </dl>
+    </div>
+    <div id="d4e355" class="entity"><a name="http://purl.org/ontology/bibo/Conference"></a>
+
+        <h3>Conferência<sup title="classe" class="type-c">c</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#classes">Classe TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://purl.org/ontology/bibo/Conference</p>
+
+        <div class="comment"><p>Conferência é um Evento Temporário caracterizado por uma reunião com objetivo de debate,
+            discussão e exposição de ideias/informações de caráter científico ou cultural.</p></div>
+        <dl class="description">
+            <dt>possui super-classes</dt>
+            <dd><a href="#d4e572" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#TemporaryEvent">Evento
+                Temporário</a><sup title="classe" class="type-c">c</sup></dd>
+        </dl>
+    </div>
+    <div id="d4e586" class="entity"><a
+            name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CInwww.aktors.org/ontology/portal#Course"></a>
+
+        <h3>Curso<sup title="classe" class="type-c">c</sup><span class="backlink"> voltar para <a href="#toc">TdC</a> ou <a
+                href="#classes">Classe TdC</a></span></h3>
+
+        <p><strong>IRI:</strong>
+            http://www.semanticweb.org/jonatas/ontologies/2013/11/CInwww.aktors.org/ontology/portal#Course</p>
+
+        <div class="comment"><p>Curso é um Agrupamento Acadêmico oferecido por um Centro com o objetivo de prover
+            formação acadêmica em uma Área de Conhecimento.</p></div>
+        <dl class="description">
+            <dt>possui super-classes</dt>
+            <dd><a href="#d4e446" title="http://www.aktors.org/ontology/portal#Organization">Organização</a><sup
+                    title="classe" class="type-c">c</sup></dd>
+        </dl>
+    </div>
+    <div id="d4e490" class="entity"><a name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#Discipline"></a>
+
+        <h3>Disciplina<sup title="classe" class="type-c">c</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#classes">Classe TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#Discipline</p>
+
+        <div class="comment"><p>Disciplina é um componente curricular oferecido por uma organização que possui
+            associação com uma ou mais áreas de conhecimento.</p></div>
+        <dl class="description">
+            <dt>possui super-classes</dt>
+            <dd><a href="#d4e399" title="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping">Agrupamento Acadêmico</a><sup
+                    title="classe" class="type-c">c</sup></dd>
+            <dt>está no domínio de</dt>
+            <dd><a href="#d4e213" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#code">:code</a><sup
+                    title="propriedade de dados" class="type-dp">dp</sup>, <a href="#d4e87"
+                                                                              title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#has-association-with">:has-association-with</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup>, <a href="#d4e171"
+                                                                               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#prerequisite">:prerequisite</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup>, <a href="#d4e337"
+                                                                               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#workload">:workload</a><sup
+                    title="propriedade de dados" class="type-dp">dp</sup></dd>
+            <dt>está no intervalo de</dt>
+            <dd><a href="#d4e139" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#isOccurrenceOf">:isOccurrenceOf</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup>, <a href="#d4e171"
+                                                                               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#prerequisite">:prerequisite</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup></dd>
+        </dl>
+    </div>
+    <div id="d4e416" class="entity"><a name="http://www.aktors.org/ontology/portal#Academic"></a>
+
+        <h3>Docente<sup title="classe" class="type-c">c</sup><span class="backlink"> voltar para <a href="#toc">TdC</a> ou <a
+                href="#classes">Classe TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.aktors.org/ontology/portal#Academic</p>
+
+        <div class="comment"><p>Docente é um funcionário da Universidade que exerce, em seu âmbito, atividades de
+            magistério superior. Atividades essas que correspondem à produção, ampliação e transmissão do saber.</p>
+        </div>
+        <dl class="description">
+            <dt>possui super-classes</dt>
+            <dd><a href="#d4e633" title="http://xmlns.com/foaf/0.1/Person">Pessoa</a><sup title="classe" class="type-c">c</sup>
+            </dd>
+            <dt>está no domínio de</dt>
+            <dd><a href="#d4e64"
+                   title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#has-area-of-expertise">:has-area-of-expertise</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup>, <a href="#d4e75"
+                                                                               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#has-area-of-interest">:has-area-of-interest</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup>, <a href="#d4e96"
+                                                                               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#hasDegrees">:hasDegrees</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup></dd>
+            <dt>está no intervalo de</dt>
+            <dd><a href="#d4e181"
+                   title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#taughtBy">:taughtBy</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup></dd>
+        </dl>
+    </div>
+    <div id="d4e572" class="entity"><a
+            name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#TemporaryEvent"></a>
+
+        <h3>Evento Temporário<sup title="classe" class="type-c">c</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#classes">Classe TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#TemporaryEvent</p>
+
+        <div class="comment"><p>Evento que ocorre durante um intervalo de tempo definido.</p></div>
+        <dl class="description">
+            <dt>possui sub-classes</dt>
+            <dd><a href="#d4e474"
+                   title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#Allocation">Alocação</a><sup
+                    title="classe" class="type-c">c</sup>, <a href="#d4e539"
+                                                              title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#Occupation">Cargo</a><sup
+                    title="classe" class="type-c">c</sup>, <a href="#d4e355"
+                                                              title="http://purl.org/ontology/bibo/Conference">Conferência</a><sup
+                    title="classe" class="type-c">c</sup></dd>
+            <dt>está no domínio de</dt>
+            <dd><a href="#d4e243" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#endDate">:endDate</a><sup
+                    title="propriedade de dados" class="type-dp">dp</sup>, <a href="#d4e117"
+                                                                              title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#hasParticipants">:hasParticipants</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup>, <a href="#d4e325"
+                                                                               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#startDate">:startDate</a><sup
+                    title="propriedade de dados" class="type-dp">dp</sup></dd>
+        </dl>
+    </div>
+    <div id="d4e432" class="entity"><a name="http://www.aktors.org/ontology/portal#Academic-Degree"></a>
+
+        <h3>Grau Acadêmico<sup title="classe" class="type-c">c</sup><span class="backlink"> voltar para <a href="#toc">TdC</a> ou <a
+                href="#classes">Classe TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.aktors.org/ontology/portal#Academic-Degree</p>
+
+        <div class="comment"><p>Representa um título conferido e reconhecido por uma Organização, geralmente concedido
+            após a realização de um Curso.</p></div>
+        <dl class="description">
+            <dt>está no domínio de</dt>
+            <dd><a href="#d4e43" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#conferredBy">:conferredBy</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup></dd>
+            <dt>está no intervalo de</dt>
+            <dd><a href="#d4e96" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#hasDegrees">:hasDegrees</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup></dd>
+        </dl>
+    </div>
+    <div id="d4e556" class="entity"><a
+            name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#ResearchGroup"></a>
+
+        <h3>Grupo de Pesquisa<sup title="classe" class="type-c">c</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#classes">Classe TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#ResearchGroup</p>
+
+        <div class="comment"><p>É definido como um conjunto de recursos humanos e materiais organizados
+            hierarquicamente, guiados por uma linha de pesquisa acerca de uma Áreaa de Conhecimento.</p></div>
+        <dl class="description">
+            <dt>possui super-classes</dt>
+            <dd><a href="#d4e446" title="http://www.aktors.org/ontology/portal#Organization">Organização</a><sup
+                    title="classe" class="type-c">c</sup></dd>
+        </dl>
+    </div>
+    <div id="d4e446" class="entity"><a name="http://www.aktors.org/ontology/portal#Organization"></a>
+
+        <h3>Organização<sup title="classe" class="type-c">c</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#classes">Classe TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.aktors.org/ontology/portal#Organization</p>
+        <dl class="description">
+            <dt>possui sub-classes</dt>
+            <dd><a href="#d4e383" title="http://purl.org/vocab/aiiso/schema#Center">Centro</a><sup title="classe"
+                                                                                                   class="type-c">c</sup>,
+                <a href="#d4e586"
+                   title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CInwww.aktors.org/ontology/portal#Course">Curso</a><sup
+                        title="classe" class="type-c">c</sup>, <a href="#d4e556"
+                                                                  title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#ResearchGroup">Grupo
+                    de Pesquisa</a><sup title="classe" class="type-c">c</sup>, <a href="#d4e617"
+                                                                                  title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CInwww.aktors.org/ontology/portal#University">Universidade</a><sup
+                        title="classe" class="type-c">c</sup></dd>
+            <dt>está no domínio de</dt>
+            <dd><a href="#d4e32"
+                   title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#aPartOf">:aPartOf</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup>, <a href="#d4e105"
+                                                                               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#hasOccupation">:hasOccupation</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup>, <a href="#d4e117"
+                                                                               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#hasParticipants">:hasParticipants</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup>, <a href="#d4e263"
+                                                                               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#homepage">:homepage</a><sup
+                    title="propriedade de dados" class="type-dp">dp</sup></dd>
+            <dt>está no intervalo de</dt>
+            <dd><a href="#d4e32"
+                   title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#aPartOf">:aPartOf</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup>, <a href="#d4e43"
+                                                                               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#conferredBy">:conferredBy</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup>, <a href="#d4e55"
+                                                                               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#fundedBy">:fundedBy</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup></dd>
+            <dt>é disjunto com</dt>
+            <dd><a href="#d4e399" title="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping">Agrupamento Acadêmico</a><sup
+                    title="classe" class="type-c">c</sup></dd>
+        </dl>
+    </div>
+    <div id="d4e633" class="entity"><a name="http://xmlns.com/foaf/0.1/Person"></a>
+
+        <h3>Pessoa<sup title="classe" class="type-c">c</sup><span class="backlink"> voltar para <a href="#toc">TdC</a> ou <a
+                href="#classes">Classe TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://xmlns.com/foaf/0.1/Person</p>
+        <dl class="description">
+            <dt>possui sub-classes</dt>
+            <dd><a href="#d4e416" title="http://www.aktors.org/ontology/portal#Academic">Docente</a><sup title="classe"
+                                                                                                         class="type-c">c</sup>
+            </dd>
+            <dt>está no domínio de</dt>
+            <dd><a href="#d4e194" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#academicDegree">:academicDegree</a><sup
+                    title="propriedade de dados" class="type-dp">dp</sup>, <a href="#d4e203"
+                                                                              title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#age">:age</a><sup
+                    title="propriedade de dados" class="type-dp">dp</sup>, <a href="#d4e233"
+                                                                              title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#email">:email</a><sup
+                    title="propriedade de dados" class="type-dp">dp</sup>, <a href="#d4e254"
+                                                                              title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#gender">:gender</a><sup
+                    title="propriedade de dados" class="type-dp">dp</sup>, <a href="#d4e263"
+                                                                              title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#homepage">:homepage</a><sup
+                    title="propriedade de dados" class="type-dp">dp</sup>, <a href="#d4e286"
+                                                                              title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#lattes">:lattes</a><sup
+                    title="propriedade de dados" class="type-dp">dp</sup>, <a href="#d4e307"
+                                                                              title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#office">:office</a><sup
+                    title="propriedade de dados" class="type-dp">dp</sup>, <a href="#d4e316"
+                                                                              title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#phone">:phone</a><sup
+                    title="propriedade de dados" class="type-dp">dp</sup>, <a href="#d4e13"
+                                                                              title="http://www.aktors.org/ontology/portal#has-research-interest">portal:has-research-interest</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup></dd>
+            <dt>está no intervalo de</dt>
+            <dd><a href="#d4e117" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#hasParticipants">:hasParticipants</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup>, <a href="#d4e160"
+                                                                               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#occupiedBy">:occupiedBy</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup></dd>
+        </dl>
+    </div>
+    <div id="d4e458" class="entity"><a name="http://www.aktors.org/ontology/portal#Project"></a>
+
+        <h3>Projeto<sup title="classe" class="type-c">c</sup><span class="backlink"> voltar para <a href="#toc">TdC</a> ou <a
+                href="#classes">Classe TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.aktors.org/ontology/portal#Project</p>
+
+        <div class="comment"><p>Projeto é um plano de ações que envolve recursos humanos e materiais com objetivo
+            definido e prazo determinado. Possui caráter educativo, social, científico ou tecnológico.</p></div>
+        <dl class="description">
+            <dt>possui super-classes</dt>
+            <dd><a href="#d4e399" title="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping">Agrupamento Acadêmico</a><sup
+                    title="classe" class="type-c">c</sup></dd>
+            <dt>está no domínio de</dt>
+            <dd><a href="#d4e55"
+                   title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#fundedBy">:fundedBy</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup></dd>
+        </dl>
+    </div>
+    <div id="d4e372" class="entity"><a name="http://purl.org/ontology/bibo/Document"></a>
+
+        <h3>Publicação<sup title="classe" class="type-c">c</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#classes">Classe TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://purl.org/ontology/bibo/Document</p></div>
+    <div id="d4e617" class="entity"><a
+            name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CInwww.aktors.org/ontology/portal#University"></a>
+
+        <h3>Universidade<sup title="classe" class="type-c">c</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#classes">Classe TdC</a></span></h3>
+
+        <p><strong>IRI:</strong>
+            http://www.semanticweb.org/jonatas/ontologies/2013/11/CInwww.aktors.org/ontology/portal#University</p>
+
+        <div class="comment"><p>Universidade é uma Organização formada por Centros incubida de estimular atividades nos
+            diversos campos de conhecimento e estender o ensino e pesquisa à comunidade, mediante cursos ou serviços
+            especiais.</p></div>
+        <dl class="description">
+            <dt>possui super-classes</dt>
+            <dd><a href="#d4e446" title="http://www.aktors.org/ontology/portal#Organization">Organização</a><sup
+                    title="classe" class="type-c">c</sup></dd>
+        </dl>
+    </div>
+    <div id="d4e507" class="entity"><a
+            name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#ExpertiseArea"></a>
+
+        <h3>Área de Atuação<sup title="classe" class="type-c">c</sup><span class="backlink"> voltar para <a href="#toc">TdC</a> ou <a
+                href="#classes">Classe TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#ExpertiseArea</p>
+
+        <div class="comment"><p>É um conjunto de conhecimentos inter-relacionados segundo a natureza do objeto de
+            investigação com finalidades de ensino, pesquisa e aplicações práticas.</p></div>
+        <dl class="description">
+            <dt>possui super-classes</dt>
+            <dd><a href="#d4e603"
+                   title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CInwww.aktors.org/ontology/portal#KnowledgeArea">Área
+                de Conhecimento</a><sup title="classe" class="type-c">c</sup></dd>
+            <dt>está no intervalo de</dt>
+            <dd><a href="#d4e64"
+                   title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#has-area-of-expertise">:has-area-of-expertise</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup>, <a href="#d4e128"
+                                                                               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#is-sub-area-of">:is-sub-area-of</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup></dd>
+        </dl>
+    </div>
+    <div id="d4e603" class="entity"><a
+            name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CInwww.aktors.org/ontology/portal#KnowledgeArea"></a>
+
+        <h3>Área de Conhecimento<sup title="classe" class="type-c">c</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#classes">Classe TdC</a></span></h3>
+
+        <p><strong>IRI:</strong>
+            http://www.semanticweb.org/jonatas/ontologies/2013/11/CInwww.aktors.org/ontology/portal#KnowledgeArea</p>
+
+        <div class="comment"><p>Pode ser caracterizado como uma Área de Atuação ou Área de Interesse.</p></div>
+        <dl class="description">
+            <dt>possui sub-classes</dt>
+            <dd><a href="#d4e507" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#ExpertiseArea">Área
+                de Atuação</a><sup title="classe" class="type-c">c</sup>, <a href="#d4e523"
+                                                                             title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#InterestArea">Área
+                de Interesse</a><sup title="classe" class="type-c">c</sup></dd>
+            <dt>está no domínio de</dt>
+            <dd><a href="#d4e23" title="http://www.aktors.org/ontology/portal#sub-area-of">portal:sub-area-of</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup></dd>
+            <dt>está no intervalo de</dt>
+            <dd><a href="#d4e87" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#has-association-with">:has-association-with</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup>, <a href="#d4e13"
+                                                                               title="http://www.aktors.org/ontology/portal#has-research-interest">portal:has-research-interest</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup>, <a href="#d4e23"
+                                                                               title="http://www.aktors.org/ontology/portal#sub-area-of">portal:sub-area-of</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup></dd>
+        </dl>
+    </div>
+    <div id="d4e523" class="entity"><a
+            name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#InterestArea"></a>
+
+        <h3>Área de Interesse<sup title="classe" class="type-c">c</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#classes">Classe TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#InterestArea</p>
+
+        <div class="comment"><p>Especialização de uma ou mais Áreas de Atuação.</p></div>
+        <dl class="description">
+            <dt>possui super-classes</dt>
+            <dd><a href="#d4e603"
+                   title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CInwww.aktors.org/ontology/portal#KnowledgeArea">Área
+                de Conhecimento</a><sup title="classe" class="type-c">c</sup></dd>
+            <dt>está no domínio de</dt>
+            <dd><a href="#d4e128" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#is-sub-area-of">:is-sub-area-of</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup></dd>
+            <dt>está no intervalo de</dt>
+            <dd><a href="#d4e75" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#has-area-of-interest">:has-area-of-interest</a><sup
+                    title="propriedade de objeto" class="type-op">op</sup></dd>
+        </dl>
+    </div>
+</div>
+<div id="objectproperties"><h2>Propriedades de Objeto</h2>
+    <ul class="hlist">
+        <li><a href="#d4e32"
+               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#aPartOf"><span>:aPartOf</span></a></li>
+        <li><a href="#d4e43" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#conferredBy"><span>:conferredBy</span></a>
+        </li>
+        <li><a href="#d4e55"
+               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#fundedBy"><span>:fundedBy</span></a>
+        </li>
+        <li><a href="#d4e64"
+               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#has-area-of-expertise"><span>:has-area-of-expertise</span></a>
+        </li>
+        <li><a href="#d4e75"
+               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#has-area-of-interest"><span>:has-area-of-interest</span></a>
+        </li>
+        <li><a href="#d4e87"
+               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#has-association-with"><span>:has-association-with</span></a>
+        </li>
+        <li><a href="#d4e96" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#hasDegrees"><span>:hasDegrees</span></a>
+        </li>
+        <li><a href="#d4e105" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#hasOccupation"><span>:hasOccupation</span></a>
+        </li>
+        <li><a href="#d4e117" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#hasParticipants"><span>:hasParticipants</span></a>
+        </li>
+        <li><a href="#d4e128" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#is-sub-area-of"><span>:is-sub-area-of</span></a>
+        </li>
+        <li><a href="#d4e139" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#isOccurrenceOf"><span>:isOccurrenceOf</span></a>
+        </li>
+        <li><a href="#d4e151"
+               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#managed"><span>:managed</span></a></li>
+        <li><a href="#d4e160" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#occupiedBy"><span>:occupiedBy</span></a>
+        </li>
+        <li><a href="#d4e171" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#prerequisite"><span>:prerequisite</span></a>
+        </li>
+        <li><a href="#d4e181"
+               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#taughtBy"><span>:taughtBy</span></a>
+        </li>
+        <li><a href="#d4e13" title="http://www.aktors.org/ontology/portal#has-research-interest"><span>portal:has-research-interest</span></a>
+        </li>
+        <li><a href="#d4e23"
+               title="http://www.aktors.org/ontology/portal#sub-area-of"><span>portal:sub-area-of</span></a></li>
+    </ul>
+    <div id="d4e32" class="entity"><a name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#aPartOf"></a>
+
+        <h3>:aPartOf<sup title="propriedade de objeto" class="type-op">op</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#objectproperties">Propriedade de Objeto TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#aPartOf</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui domínio</dt>
+                <dd><a href="#d4e399" title="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping">Agrupamento
+                    Acadêmico</a><sup title="classe" class="type-c">c</sup></dd>
+                <dd><a href="#d4e446" title="http://www.aktors.org/ontology/portal#Organization">Organização</a><sup
+                        title="classe" class="type-c">c</sup></dd>
+                <dt>possui intervalo</dt>
+                <dd><a href="#d4e446" title="http://www.aktors.org/ontology/portal#Organization">Organização</a><sup
+                        title="classe" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e43" class="entity"><a name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#conferredBy"></a>
+
+        <h3>:conferredBy<sup title="propriedade de objeto" class="type-op">op</sup><span
+                class="backlink"> voltar para <a href="#toc">TdC</a> ou <a href="#objectproperties">Propriedade de
+            Objeto TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#conferredBy</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui super-propriedades</dt>
+                <dd><span class="dotted"
+                          title="http://www.w3.org/2002/07/owl#topObjectProperty">owl:topObjectProperty</span></dd>
+                <dt>possui domínio</dt>
+                <dd><a href="#d4e432" title="http://www.aktors.org/ontology/portal#Academic-Degree">Grau
+                    Acadêmico</a><sup title="classe" class="type-c">c</sup></dd>
+                <dt>possui intervalo</dt>
+                <dd><a href="#d4e446" title="http://www.aktors.org/ontology/portal#Organization">Organização</a><sup
+                        title="classe" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e55" class="entity"><a name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#fundedBy"></a>
+
+        <h3>:fundedBy<sup title="propriedade de objeto" class="type-op">op</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#objectproperties">Propriedade de Objeto TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#fundedBy</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui domínio</dt>
+                <dd><a href="#d4e458" title="http://www.aktors.org/ontology/portal#Project">Projeto</a><sup
+                        title="classe" class="type-c">c</sup></dd>
+                <dt>possui intervalo</dt>
+                <dd><a href="#d4e446" title="http://www.aktors.org/ontology/portal#Organization">Organização</a><sup
+                        title="classe" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e64" class="entity"><a
+            name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#has-area-of-expertise"></a>
+
+        <h3>:has-area-of-expertise<sup title="propriedade de objeto" class="type-op">op</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#objectproperties">Propriedade de Objeto TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#has-area-of-expertise</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui super-propriedades</dt>
+                <dd><a href="#d4e13" title="http://www.aktors.org/ontology/portal#has-research-interest">portal:has-research-interest</a><sup
+                        title="propriedade de objeto" class="type-op">op</sup></dd>
+                <dt>possui domínio</dt>
+                <dd><a href="#d4e416" title="http://www.aktors.org/ontology/portal#Academic">Docente</a><sup
+                        title="classe" class="type-c">c</sup></dd>
+                <dt>possui intervalo</dt>
+                <dd><a href="#d4e507" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#ExpertiseArea">Área
+                    de Atuação</a><sup title="classe" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e75" class="entity"><a
+            name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#has-area-of-interest"></a>
+
+        <h3>:has-area-of-interest<sup title="propriedade de objeto" class="type-op">op</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#objectproperties">Propriedade de Objeto TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#has-area-of-interest</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui super-propriedades</dt>
+                <dd><a href="#d4e13" title="http://www.aktors.org/ontology/portal#has-research-interest">portal:has-research-interest</a><sup
+                        title="propriedade de objeto" class="type-op">op</sup></dd>
+                <dt>possui domínio</dt>
+                <dd><a href="#d4e416" title="http://www.aktors.org/ontology/portal#Academic">Docente</a><sup
+                        title="classe" class="type-c">c</sup></dd>
+                <dt>possui intervalo</dt>
+                <dd><a href="#d4e523" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#InterestArea">Área
+                    de Interesse</a><sup title="classe" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e87" class="entity"><a
+            name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#has-association-with"></a>
+
+        <h3>:has-association-with<sup title="propriedade de objeto" class="type-op">op</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#objectproperties">Propriedade de Objeto TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#has-association-with</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui domínio</dt>
+                <dd><a href="#d4e490" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#Discipline">Disciplina</a><sup
+                        title="classe" class="type-c">c</sup></dd>
+                <dt>possui intervalo</dt>
+                <dd><a href="#d4e603"
+                       title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CInwww.aktors.org/ontology/portal#KnowledgeArea">Área
+                    de Conhecimento</a><sup title="classe" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e96" class="entity"><a name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#hasDegrees"></a>
+
+        <h3>:hasDegrees<sup title="propriedade de objeto" class="type-op">op</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#objectproperties">Propriedade de Objeto TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#hasDegrees</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui domínio</dt>
+                <dd><a href="#d4e416" title="http://www.aktors.org/ontology/portal#Academic">Docente</a><sup
+                        title="classe" class="type-c">c</sup></dd>
+                <dt>possui intervalo</dt>
+                <dd><a href="#d4e432" title="http://www.aktors.org/ontology/portal#Academic-Degree">Grau
+                    Acadêmico</a><sup title="classe" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e105" class="entity"><a
+            name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#hasOccupation"></a>
+
+        <h3>:hasOccupation<sup title="propriedade de objeto" class="type-op">op</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#objectproperties">Propriedade de Objeto TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#hasOccupation</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui super-propriedades</dt>
+                <dd><span class="dotted"
+                          title="http://www.w3.org/2002/07/owl#topObjectProperty">owl:topObjectProperty</span></dd>
+                <dt>possui domínio</dt>
+                <dd><a href="#d4e446" title="http://www.aktors.org/ontology/portal#Organization">Organização</a><sup
+                        title="classe" class="type-c">c</sup></dd>
+                <dt>possui intervalo</dt>
+                <dd><a href="#d4e539"
+                       title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#Occupation">Cargo</a><sup
+                        title="classe" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e117" class="entity"><a
+            name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#hasParticipants"></a>
+
+        <h3>:hasParticipants<sup title="propriedade de objeto" class="type-op">op</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#objectproperties">Propriedade de Objeto TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#hasParticipants</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui sub-propriedades</dt>
+                <dd><a href="#d4e160" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#occupiedBy">:occupiedBy</a><sup
+                        title="propriedade de objeto" class="type-op">op</sup>, <a href="#d4e181"
+                                                                                   title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#taughtBy">:taughtBy</a><sup
+                        title="propriedade de objeto" class="type-op">op</sup></dd>
+                <dt>possui domínio</dt>
+                <dd><a href="#d4e446" title="http://www.aktors.org/ontology/portal#Organization">Organização</a><sup
+                        title="classe" class="type-c">c</sup></dd>
+                <dd><a href="#d4e572" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#TemporaryEvent">Evento
+                    Temporário</a><sup title="classe" class="type-c">c</sup></dd>
+                <dt>possui intervalo</dt>
+                <dd><a href="#d4e633" title="http://xmlns.com/foaf/0.1/Person">Pessoa</a><sup title="classe"
+                                                                                              class="type-c">c</sup>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e128" class="entity"><a
+            name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#is-sub-area-of"></a>
+
+        <h3>:is-sub-area-of<sup title="propriedade de objeto" class="type-op">op</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#objectproperties">Propriedade de Objeto TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#is-sub-area-of</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui super-propriedades</dt>
+                <dd><a href="#d4e23"
+                       title="http://www.aktors.org/ontology/portal#sub-area-of">portal:sub-area-of</a><sup
+                        title="propriedade de objeto" class="type-op">op</sup></dd>
+                <dt>possui domínio</dt>
+                <dd><a href="#d4e523" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#InterestArea">Área
+                    de Interesse</a><sup title="classe" class="type-c">c</sup></dd>
+                <dt>possui intervalo</dt>
+                <dd><a href="#d4e507" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#ExpertiseArea">Área
+                    de Atuação</a><sup title="classe" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e139" class="entity"><a
+            name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#isOccurrenceOf"></a>
+
+        <h3>:isOccurrenceOf<sup title="propriedade de objeto" class="type-op">op</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#objectproperties">Propriedade de Objeto TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#isOccurrenceOf</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui super-propriedades</dt>
+                <dd><span class="dotted"
+                          title="http://www.w3.org/2002/07/owl#topObjectProperty">owl:topObjectProperty</span></dd>
+                <dt>possui domínio</dt>
+                <dd><a href="#d4e474" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#Allocation">Alocação</a><sup
+                        title="classe" class="type-c">c</sup></dd>
+                <dt>possui intervalo</dt>
+                <dd><a href="#d4e490" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#Discipline">Disciplina</a><sup
+                        title="classe" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e151" class="entity"><a name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#managed"></a>
+
+        <h3>:managed<sup title="propriedade de objeto" class="type-op">op</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#objectproperties">Propriedade de Objeto TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#managed</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui domínio</dt>
+                <dd><a href="#d4e383" title="http://purl.org/vocab/aiiso/schema#Center">Centro</a><sup title="classe"
+                                                                                                       class="type-c">c</sup>
+                </dd>
+                <dt>possui intervalo</dt>
+                <dd><a href="#d4e539"
+                       title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#Occupation">Cargo</a><sup
+                        title="classe" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e160" class="entity"><a name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#occupiedBy"></a>
+
+        <h3>:occupiedBy<sup title="propriedade de objeto" class="type-op">op</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#objectproperties">Propriedade de Objeto TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#occupiedBy</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui super-propriedades</dt>
+                <dd><a href="#d4e117" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#hasParticipants">:hasParticipants</a><sup
+                        title="propriedade de objeto" class="type-op">op</sup></dd>
+                <dt>possui domínio</dt>
+                <dd><a href="#d4e539"
+                       title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#Occupation">Cargo</a><sup
+                        title="classe" class="type-c">c</sup></dd>
+                <dt>possui intervalo</dt>
+                <dd><a href="#d4e633" title="http://xmlns.com/foaf/0.1/Person">Pessoa</a><sup title="classe"
+                                                                                              class="type-c">c</sup>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e171" class="entity"><a
+            name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#prerequisite"></a>
+
+        <h3>:prerequisite<sup title="propriedade de objeto" class="type-op">op</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#objectproperties">Propriedade de Objeto TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#prerequisite</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui domínio</dt>
+                <dd><a href="#d4e490" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#Discipline">Disciplina</a><sup
+                        title="classe" class="type-c">c</sup></dd>
+                <dt>possui intervalo</dt>
+                <dd><a href="#d4e490" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#Discipline">Disciplina</a><sup
+                        title="classe" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e181" class="entity"><a name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#taughtBy"></a>
+
+        <h3>:taughtBy<sup title="propriedade de objeto" class="type-op">op</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#objectproperties">Propriedade de Objeto TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#taughtBy</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui super-propriedades</dt>
+                <dd><a href="#d4e117" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#hasParticipants">:hasParticipants</a><sup
+                        title="propriedade de objeto" class="type-op">op</sup></dd>
+                <dt>possui domínio</dt>
+                <dd><a href="#d4e474" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#Allocation">Alocação</a><sup
+                        title="classe" class="type-c">c</sup></dd>
+                <dt>possui intervalo</dt>
+                <dd><a href="#d4e416" title="http://www.aktors.org/ontology/portal#Academic">Docente</a><sup
+                        title="classe" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e13" class="entity"><a name="http://www.aktors.org/ontology/portal#has-research-interest"></a>
+
+        <h3>portal:has-research-interest<sup title="propriedade de objeto" class="type-op">op</sup><span
+                class="backlink"> voltar para <a href="#toc">TdC</a> ou <a href="#objectproperties">Propriedade de
+            Objeto TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.aktors.org/ontology/portal#has-research-interest</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui sub-propriedades</dt>
+                <dd><a href="#d4e64"
+                       title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#has-area-of-expertise">:has-area-of-expertise</a><sup
+                        title="propriedade de objeto" class="type-op">op</sup>, <a href="#d4e75"
+                                                                                   title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#has-area-of-interest">:has-area-of-interest</a><sup
+                        title="propriedade de objeto" class="type-op">op</sup></dd>
+                <dt>possui domínio</dt>
+                <dd><a href="#d4e633" title="http://xmlns.com/foaf/0.1/Person">Pessoa</a><sup title="classe"
+                                                                                              class="type-c">c</sup>
+                </dd>
+                <dt>possui intervalo</dt>
+                <dd><a href="#d4e603"
+                       title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CInwww.aktors.org/ontology/portal#KnowledgeArea">Área
+                    de Conhecimento</a><sup title="classe" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e23" class="entity"><a name="http://www.aktors.org/ontology/portal#sub-area-of"></a>
+
+        <h3>portal:sub-area-of<sup title="propriedade de objeto" class="type-op">op</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#objectproperties">Propriedade de Objeto TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.aktors.org/ontology/portal#sub-area-of</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui sub-propriedades</dt>
+                <dd><a href="#d4e128" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#is-sub-area-of">:is-sub-area-of</a><sup
+                        title="propriedade de objeto" class="type-op">op</sup></dd>
+                <dt>possui domínio</dt>
+                <dd><a href="#d4e603"
+                       title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CInwww.aktors.org/ontology/portal#KnowledgeArea">Área
+                    de Conhecimento</a><sup title="classe" class="type-c">c</sup></dd>
+                <dt>possui intervalo</dt>
+                <dd><a href="#d4e603"
+                       title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CInwww.aktors.org/ontology/portal#KnowledgeArea">Área
+                    de Conhecimento</a><sup title="classe" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+    </div>
+</div>
+<div id="dataproperties"><h2>Propriedades de dados</h2>
+    <ul class="hlist">
+        <li><a href="#d4e194" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#academicDegree"><span>:academicDegree</span></a>
+        </li>
+        <li><a href="#d4e203"
+               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#age"><span>:age</span></a></li>
+        <li><a href="#d4e213" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#code"><span>:code</span></a>
+        </li>
+        <li><a href="#d4e222" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#description"><span>:description</span></a>
+        </li>
+        <li><a href="#d4e233"
+               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#email"><span>:email</span></a></li>
+        <li><a href="#d4e243"
+               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#endDate"><span>:endDate</span></a></li>
+        <li><a href="#d4e254"
+               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#gender"><span>:gender</span></a></li>
+        <li><a href="#d4e263"
+               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#homepage"><span>:homepage</span></a>
+        </li>
+        <li><a href="#d4e279"
+               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#images"><span>:images</span></a></li>
+        <li><a href="#d4e286"
+               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#lattes"><span>:lattes</span></a></li>
+        <li><a href="#d4e297" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#name"><span>:name</span></a>
+        </li>
+        <li><a href="#d4e307"
+               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#office"><span>:office</span></a></li>
+        <li><a href="#d4e316"
+               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#phone"><span>:phone</span></a></li>
+        <li><a href="#d4e325" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#startDate"><span>:startDate</span></a>
+        </li>
+        <li><a href="#d4e337"
+               title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#workload"><span>:workload</span></a>
+        </li>
+        <li><a href="#d4e346" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#year"><span>:year</span></a>
+        </li>
+    </ul>
+    <div id="d4e194" class="entity"><a
+            name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#academicDegree"></a>
+
+        <h3>:academicDegree<sup title="propriedade de dados" class="type-dp">dp</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#dataproperties">Propriedade de Dados TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#academicDegree</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui domínio</dt>
+                <dd><a href="#d4e633" title="http://xmlns.com/foaf/0.1/Person">Pessoa</a><sup title="classe"
+                                                                                              class="type-c">c</sup>
+                </dd>
+                <dt>possui intervalo</dt>
+                <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">xsd:string</span></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e203" class="entity"><a name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#age"></a>
+
+        <h3>:age<sup title="propriedade de dados" class="type-dp">dp</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#dataproperties">Propriedade de Dados TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#age</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui domínio</dt>
+                <dd><a href="#d4e633" title="http://xmlns.com/foaf/0.1/Person">Pessoa</a><sup title="classe"
+                                                                                              class="type-c">c</sup>
+                </dd>
+                <dt>possui intervalo</dt>
+                <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#short">xsd:short</span></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e213" class="entity"><a name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#code"></a>
+
+        <h3>:code<sup title="propriedade de dados" class="type-dp">dp</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#dataproperties">Propriedade de Dados TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#code</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui domínio</dt>
+                <dd><a href="#d4e490" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#Discipline">Disciplina</a><sup
+                        title="classe" class="type-c">c</sup></dd>
+                <dt>possui intervalo</dt>
+                <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</span></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e222" class="entity"><a name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#description"></a>
+
+        <h3>:description<sup title="propriedade de dados" class="type-dp">dp</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#dataproperties">Propriedade de Dados TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#description</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui super-propriedades</dt>
+                <dd><span class="dotted"
+                          title="http://www.w3.org/2002/07/owl#topDataProperty">owl:topDataProperty</span></dd>
+                <dt>possui domínio</dt>
+                <dd><span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">owl:Thing</span></dd>
+                <dt>possui intervalo</dt>
+                <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">xsd:string</span></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e233" class="entity"><a name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#email"></a>
+
+        <h3>:email<sup title="propriedade de dados" class="type-dp">dp</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#dataproperties">Propriedade de Dados TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#email</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui super-propriedades</dt>
+                <dd><span class="dotted"
+                          title="http://www.w3.org/2002/07/owl#topDataProperty">owl:topDataProperty</span></dd>
+                <dt>possui domínio</dt>
+                <dd><a href="#d4e633" title="http://xmlns.com/foaf/0.1/Person">Pessoa</a><sup title="classe"
+                                                                                              class="type-c">c</sup>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e243" class="entity"><a name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#endDate"></a>
+
+        <h3>:endDate<sup title="propriedade de dados" class="type-dp">dp</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#dataproperties">Propriedade de Dados TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#endDate</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui super-propriedades</dt>
+                <dd><span class="dotted"
+                          title="http://www.w3.org/2002/07/owl#topDataProperty">owl:topDataProperty</span></dd>
+                <dt>possui domínio</dt>
+                <dd><a href="#d4e572" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#TemporaryEvent">Evento
+                    Temporário</a><sup title="classe" class="type-c">c</sup></dd>
+                <dt>possui intervalo</dt>
+                <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</span></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e254" class="entity"><a name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#gender"></a>
+
+        <h3>:gender<sup title="propriedade de dados" class="type-dp">dp</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#dataproperties">Propriedade de Dados TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#gender</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui domínio</dt>
+                <dd><a href="#d4e633" title="http://xmlns.com/foaf/0.1/Person">Pessoa</a><sup title="classe"
+                                                                                              class="type-c">c</sup>
+                </dd>
+                <dt>possui intervalo</dt>
+                <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">xsd:string</span></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e263" class="entity"><a name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#homepage"></a>
+
+        <h3>:homepage<sup title="propriedade de dados" class="type-dp">dp</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#dataproperties">Propriedade de Dados TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#homepage</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui super-propriedades</dt>
+                <dd><span class="dotted"
+                          title="http://www.w3.org/2002/07/owl#topDataProperty">owl:topDataProperty</span></dd>
+                <dt>possui domínio</dt>
+                <dd><a href="#d4e399" title="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping">Agrupamento
+                    Acadêmico</a><sup title="classe" class="type-c">c</sup></dd>
+                <dd><a href="#d4e446" title="http://www.aktors.org/ontology/portal#Organization">Organização</a><sup
+                        title="classe" class="type-c">c</sup></dd>
+                <dd><a href="#d4e633" title="http://xmlns.com/foaf/0.1/Person">Pessoa</a><sup title="classe"
+                                                                                              class="type-c">c</sup>
+                </dd>
+                <dt>possui intervalo</dt>
+                <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</span></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e279" class="entity"><a name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#images"></a>
+
+        <h3>:images<sup title="propriedade de dados" class="type-dp">dp</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#dataproperties">Propriedade de Dados TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#images</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui domínio</dt>
+                <dd><span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">owl:Thing</span></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e286" class="entity"><a name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#lattes"></a>
+
+        <h3>:lattes<sup title="propriedade de dados" class="type-dp">dp</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#dataproperties">Propriedade de Dados TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#lattes</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui super-propriedades</dt>
+                <dd><span class="dotted"
+                          title="http://www.w3.org/2002/07/owl#topDataProperty">owl:topDataProperty</span></dd>
+                <dt>possui domínio</dt>
+                <dd><a href="#d4e633" title="http://xmlns.com/foaf/0.1/Person">Pessoa</a><sup title="classe"
+                                                                                              class="type-c">c</sup>
+                </dd>
+                <dt>possui intervalo</dt>
+                <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</span></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e297" class="entity"><a name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#name"></a>
+
+        <h3>:name<sup title="propriedade de dados" class="type-dp">dp</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#dataproperties">Propriedade de Dados TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#name</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui domínio</dt>
+                <dd><span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">owl:Thing</span></dd>
+                <dt>possui intervalo</dt>
+                <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#Name">xsd:Name</span></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e307" class="entity"><a name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#office"></a>
+
+        <h3>:office<sup title="propriedade de dados" class="type-dp">dp</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#dataproperties">Propriedade de Dados TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#office</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui domínio</dt>
+                <dd><a href="#d4e633" title="http://xmlns.com/foaf/0.1/Person">Pessoa</a><sup title="classe"
+                                                                                              class="type-c">c</sup>
+                </dd>
+                <dt>possui intervalo</dt>
+                <dd><span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</span></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e316" class="entity"><a name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#phone"></a>
+
+        <h3>:phone<sup title="propriedade de dados" class="type-dp">dp</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#dataproperties">Propriedade de Dados TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#phone</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui domínio</dt>
+                <dd><a href="#d4e633" title="http://xmlns.com/foaf/0.1/Person">Pessoa</a><sup title="classe"
+                                                                                              class="type-c">c</sup>
+                </dd>
+                <dt>possui intervalo</dt>
+                <dd><span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</span></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e325" class="entity"><a name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#startDate"></a>
+
+        <h3>:startDate<sup title="propriedade de dados" class="type-dp">dp</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#dataproperties">Propriedade de Dados TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#startDate</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui super-propriedades</dt>
+                <dd><span class="dotted"
+                          title="http://www.w3.org/2002/07/owl#topDataProperty">owl:topDataProperty</span></dd>
+                <dt>possui domínio</dt>
+                <dd><a href="#d4e572" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#TemporaryEvent">Evento
+                    Temporário</a><sup title="classe" class="type-c">c</sup></dd>
+                <dt>possui intervalo</dt>
+                <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</span></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e337" class="entity"><a name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#workload"></a>
+
+        <h3>:workload<sup title="propriedade de dados" class="type-dp">dp</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#dataproperties">Propriedade de Dados TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#workload</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui domínio</dt>
+                <dd><a href="#d4e490" title="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#Discipline">Disciplina</a><sup
+                        title="classe" class="type-c">c</sup></dd>
+                <dt>possui intervalo</dt>
+                <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</span></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="d4e346" class="entity"><a name="http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#year"></a>
+
+        <h3>:year<sup title="propriedade de dados" class="type-dp">dp</sup><span class="backlink"> voltar para <a
+                href="#toc">TdC</a> ou <a href="#dataproperties">Propriedade de Dados TdC</a></span></h3>
+
+        <p><strong>IRI:</strong> http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#year</p>
+
+        <div class="description">
+            <dl>
+                <dt>possui intervalo</dt>
+                <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</span></dd>
+            </dl>
+        </div>
+    </div>
+</div>
+<div id="namespacedeclarations"><h2>Declarações de Namespace <span class="backlink"> voltar para <a href="#toc">TdC</a></span>
+</h2>
+    <dl>
+        <dt><em>namespace default</em></dt>
+        <dd>http://www.semanticweb.org/jonatas/ontologies/2013/11/CIn#</dd>
+        <dt>0-1</dt>
+        <dd>http://xmlns.com/foaf/0.1/</dd>
+        <dt>11</dt>
+        <dd>http://www.semanticweb.org/jonatas/ontologies/2013/11/</dd>
+        <dt>bibo</dt>
+        <dd>http://purl.org/ontology/bibo/</dd>
+        <dt>owl</dt>
+        <dd>http://www.w3.org/2002/07/owl#</dd>
+        <dt>portal</dt>
+        <dd>http://www.aktors.org/ontology/portal#</dd>
+        <dt>rdf</dt>
+        <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
+        <dt>rdfs</dt>
+        <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
+        <dt>schema</dt>
+        <dd>http://purl.org/vocab/aiiso/schema#</dd>
+        <dt>xsd</dt>
+        <dd>http://www.w3.org/2001/XMLSchema#</dd>
+    </dl>
+</div>
+<p class="endnote">Este documento HTML foi obtido processanto um código fonte OWL através de <a
+        href="http://www.essepuntato.it/lode">LODE</a>, <em>Live OWL Documentation Environment</em>, desenvolvido por <a
+        href="http://www.essepuntato.it">Silvio Peroni</a>.</p></body>
+</html>

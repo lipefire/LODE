@@ -1,4 +1,3 @@
-/* define a class "noprint" for sections which don't get printed */  
 .noprint { display: none; }
 
 /* our syntax menu for switching */

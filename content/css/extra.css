@@ -9,7 +9,7 @@ h1 {
 .hlist {
     border: 1px solid navy;
     padding:5px;
-    background-color: #F4FFFF; 
+    background-color: rgba(145, 52, 45, 0.2);
 }
 
 .hlist li {

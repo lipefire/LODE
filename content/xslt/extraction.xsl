@@ -30,7 +30,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
     xmlns="http://www.w3.org/1999/xhtml">
      
     <xsl:include href="swrl-module.xsl" />
-    <xsl:include href="common-functions.xsl"/>
+    <xsl:include href="../common-functions.xsl"/>
     <xsl:include href="structural-reasoner.xsl"/>
     
     <xsl:output encoding="UTF-8" indent="no" method="xhtml" />

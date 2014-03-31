@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<labels>
+    <ontology>Ontologia</ontology>
+    <ontologysource>Fontes da Ontologia</ontologysource>
+    <visualisation>Outra visualização</visualisation>
+    <visualiseitwith>visualizar com</visualiseitwith>
+    <date>Data</date>
+    <currentversion>Versão atual</currentversion>
+    <previousversion>Versão anterior</previousversion>
+    <backwardcompatiblewith>Compatível anteriormente com</backwardcompatiblewith>
+    <incompatibleWith>Incompatível com</incompatibleWith>
+    <abstract>Resumo</abstract>
+    <introduction>Introdução</introduction>
+    <disjointclasses>Todas classes disjuntas</disjointclasses>
+    <subclassdefinition>Definição Geral de Subclasse</subclassdefinition>
+    <equivalentdefinition>Definição Geral de Equivalência</equivalentdefinition>
+    <issubclassof>é subclasse de</issubclassof>
+    <isequivalentto>é equivalente a</isequivalentto>
+    <functional>funcional</functional>
+    <inversefunctional>inversamente funcional</inversefunctional>
+    <reflexive>reflexivo</reflexive>
+    <irreflexive>irreflexivo</irreflexive>
+    <symmetric>simétrico</symmetric>
+    <asymmetric>assimétrico</asymmetric>
+    <transitive>transitivo</transitive>
+    <isdefinedby>é definido por</isdefinedby>
+    <belongsto>pertence a</belongsto>
+    <issameas>é o mesmo que</issameas>
+    <isalsodefinedas>também definido por</isalsodefinedas>
+    <isdisjointwith>é disjunto com</isdisjointwith>
+    <haskeys>possui chaves</haskeys>
+    <hassuperclasses>possui super-classes</hassuperclasses>
+    <hassubclasses>possui sub-classes</hassubclasses>
+    <isindomainof>está no domínio de</isindomainof>
+    <isinrangeof>está no intervalo de</isinrangeof>
+    <hasmembers>possui membros</hasmembers>
+    <isinverseof>é inverso de</isinverseof>
+    <hassubpropertychains>possui cadeias de sub-propriedades</hassubpropertychains>
+    <hasequivalentproperties>possui propriedades equivalentes</hasequivalentproperties>
+    <hassuperproperties>possui super-propriedades</hassuperproperties>
+    <hassubproperties>possui sub-propriedades</hassubproperties>
+    <hasdomain>possui domínio</hasdomain>
+    <hasrange>possui intervalo</hasrange>
+    <importedontologies>Ontologias importadas</importedontologies>
+    <individualassertions>possui fatos</individualassertions>
+    <authors>Autores</authors>
+    <contributors>Constribuidores</contributors>
+    <publisher>Editor</publisher>
+    <toc>Tabela de conteúdos</toc>
+    <tocabbr>TdC</tocabbr>
+    <backto>voltar para</backto>
+    <class>classe</class>
+    <classes>Classes</classes>
+    <objectproperty>propriedade de objeto</objectproperty>
+    <objectproperties>Propriedades de Objeto</objectproperties>
+    <dataproperty>propriedade de dados</dataproperty>
+    <dataproperties>Propriedades de dados</dataproperties>
+    <namedindividual>indivíduos nomeados</namedindividual>
+    <namedindividuals>Indivíduos Nomeados</namedindividuals>
+    <annotationproperty>propriedade de anotação</annotationproperty>
+    <annotationproperties>Propriedades de Anotação</annotationproperties>
+    <datarange>intervalo de dados</datarange>
+    <dataranges>Intervalos de Dados</dataranges>
+    <generalaxioms>Axiomas Gerais</generalaxioms>
+    <rule>regras</rule>
+    <rules>Regras SWRL</rules>
+    <namespace>namespace default</namespace>
+    <namespaces>Declarações de Namespace</namespaces>
+    <endnote>Este documento HTML foi obtido processanto um código fonte OWL através de</endnote>
+    <developedby>desenvolvido por</developedby>
+    <or>ou</or>
+    <classtoc>Classe TdC</classtoc>
+    <objectpropertytoc>Propriedade de Objeto TdC</objectpropertytoc>
+    <datapropertytoc>Propriedade de Dados TdC</datapropertytoc>
+    <annotationpropertytoc>Propriedade de Anotação TdC</annotationpropertytoc>
+    <namedindividualtoc>Indivíduos Nomeados TdC</namedindividualtoc>
+    <hascharacteristics>possui características</hascharacteristics>
+</labels>

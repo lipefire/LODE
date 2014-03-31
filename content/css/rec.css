@@ -1,12 +1,3 @@
-/* Style for a "Recommendation" */
-
-/*
-   Copyright 1997-2003 W3C (MIT, ERCIM, Keio). All Rights Reserved.
-   The following software licensing rules apply:
-   http://www.w3.org/Consortium/Legal/copyright-software */
-
-/* $Id: base.css,v 1.25 2006/04/18 08:42:53 bbos Exp $ */
-
 body {
   padding: 2em 1em 2em 70px;
   margin: 0;
@@ -34,7 +25,7 @@ th, td { /* ns 4 */
 
 h1, h2, h3, h4, h5, h6 { text-align: left }
 /* background should be transparent, but WebTV has a bug */
-h1, h2, h3 { color: #005A9C; background: white }
+h1, h2, h3 { color: #91342d; background: white }
 h1 { font: 170% sans-serif }
 h2 { font: 140% sans-serif }
 h3 { font: 120% sans-serif }

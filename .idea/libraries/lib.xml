@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/content/WEB-INF/lib/jgrapht-jdk1.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/content/WEB-INF/lib/saxon9he.jar!/" />
+      <root url="jar://$PROJECT_DIR$/content/WEB-INF/lib/aterm-java-1.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/content/WEB-INF/lib/pellet-owlapiv3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/content/WEB-INF/lib/pellet-datatypes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/content/WEB-INF/lib/owlapi-distribution-3.4.4-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/content/WEB-INF/lib/pellet-rules.jar!/" />
+      <root url="jar://$PROJECT_DIR$/content/WEB-INF/lib/pellet-el.jar!/" />
+      <root url="jar://$PROJECT_DIR$/content/WEB-INF/lib/pellet-core.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
